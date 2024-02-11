@@ -1,4 +1,3 @@
-import { PrismaClient } from '@prisma/client'
 import {
   createUser,
   deleteUserById,
@@ -7,7 +6,8 @@ import {
   getUserByIdOrEmail,
   getUsers,
   updateUserById,
-  updateUsersByFirstName
+  updateUsersByFirstName,
+  upsertUserById
 } from './src/database/users/index.js'
 
 
@@ -44,6 +44,13 @@ async function main() {
 
     // * -- Eliminar multiples usuarios por su nombre.
     // await deleteUsersByFirstName("Sebastian")
+
+    // * -- Actualizar o crear un usuario por su id.
+    // await upsertUserById(20, {
+    //   firstName: "Javiera",
+    //   lastName: "Toro",
+    //   email: "javi.toro1@gmail.com"
+    // });
 
   } catch (err) {
     return;

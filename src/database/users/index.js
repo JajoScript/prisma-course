@@ -6,6 +6,7 @@ import getUserByIdOrEmail from "./getUserByIdOrEmail.js"
 import getUsers from "./getUsers.js"
 import updateUserById from "./updateUserById.js"
 import updateUsersByFirstName from "./updateUsersByFirstName.js"
+import upsertUserById from "./upsertUserById.js"
 
 export {
   createUser,
@@ -15,5 +16,6 @@ export {
   getUserByIdOrEmail,
   getUsers,
   updateUserById,
-  updateUsersByFirstName
+  updateUsersByFirstName,
+  upsertUserById
 }
