@@ -2,18 +2,23 @@
   "name": "curso-prisma",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "./src/index.ts",
   "scripts": {
-    "start": "node ./index"
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node --respawn src/index.ts"
   },
   "keywords": [
-    "prisma"
+    "prisma",
+    "typescript"
   ],
   "author": "Javier Almarza",
   "license": "MIT",
   "devDependencies": {
-    "prisma": "^5.9.1"
+    "@types/node": "^20.11.17",
+    "prisma": "^5.9.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "@prisma/client": "5.9.1"

@@ -5,7 +5,13 @@ pnpm-lock.yaml
 # Variables de entorno.
 .env
 
-# Prisma
+# Prisma.
 prisma/dev.db
 prisma/dev.db-*
 prisma/migrations/**
+
+# Deprecated.
+src-old/
+
+# Build.
+dist/

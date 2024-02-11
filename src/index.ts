@@ -1,3 +1,4 @@
+import { createPost, createPostWithConnect, getPosts, getPostsByUser } from "./database/posts/"
 import {
   createUser,
   createUserWithInitialPost,
@@ -10,18 +11,19 @@ import {
   updateUserById,
   updateUsersByFirstName,
   upsertUserById
-} from './src/database/users/index.js'
-import {
-  createPost,
-  getPosts,
-  getPostsByUser
-} from './src/database/posts/index.js'
+} from "./database/users/"
 
 async function main() {
   try {
+    // * -- Crear un usuario.
+    // await createUser({
+    //   firstName: "Camilo",
+    //   lastName: "Sesto",
+    //   email: "camilein.bombein@gmail.com"
+    // });
 
     // * -- Buscar a todos los usuarios.
-    // await getUsers();
+    await getUsers();
 
     // * -- Buscar al usuario con el id.
     // await getUserById(2);
@@ -66,7 +68,7 @@ async function main() {
     // });
 
     // * -- Obtener todos los posts.
-    // await getPosts();
+    await getPosts();
 
     // * -- Obtener los posts de un usuario.
     // await getPostsByUser(2);
@@ -74,7 +76,9 @@ async function main() {
     // * -- Obtener usuarios con sus publicaciones.
     // await getUsersWithPosts();
 
+    return;
   } catch (err) {
+    console.error(err);
     return;
   }
 }
