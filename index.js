@@ -6,6 +6,7 @@ import {
   getUserById,
   getUserByIdOrEmail,
   getUsers,
+  getUsersWithPosts,
   updateUserById,
   updateUsersByFirstName,
   upsertUserById
@@ -64,17 +65,20 @@ async function main() {
     // }, 2);
 
     // * -- Crear un usuario con un post inicial.
-    // await createUserWithInitialPost({
-    //   firstName: "Manolo",
-    //   lastName: "Bustamante",
-    //   email: "manolo.busta@gmail.com"
-    // });
+    await createUserWithInitialPost({
+      firstName: "Roberto",
+      lastName: "Albatros",
+      email: "sirrobert@gmail.com"
+    });
 
     // * -- Obtener todos los posts.
     // await getPosts();
 
     // * -- Obtener los posts de un usuario.
-    await getPostsByUser(2);
+    // await getPostsByUser(2);
+
+    // * -- Obtener usuarios con sus publicaciones.
+    // await getUsersWithPosts();
 
   } catch (err) {
     return;
