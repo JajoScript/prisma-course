@@ -1,0 +1,21 @@
+{
+  "name": "curso-prisma",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./index"
+  },
+  "keywords": [
+    "prisma"
+  ],
+  "author": "Javier Almarza",
+  "license": "MIT",
+  "devDependencies": {
+    "prisma": "^5.9.1"
+  },
+  "dependencies": {
+    "@prisma/client": "5.9.1"
+  }
+}
