@@ -1,4 +1,5 @@
 import createUser from "./createUser.js"
+import createUserWithInitialPost from "./createUserWithInitialPost.js"
 import deleteUserById from "./deleteUserById.js"
 import deleteUsersByFirstName from "./deleteUsersByFirstName.js"
 import getUserById from "./getUserById.js"
@@ -10,6 +11,7 @@ import upsertUserById from "./upsertUserById.js"
 
 export {
   createUser,
+  createUserWithInitialPost,
   deleteUserById,
   deleteUsersByFirstName,
   getUserById,

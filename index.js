@@ -1,5 +1,6 @@
 import {
   createUser,
+  createUserWithInitialPost,
   deleteUserById,
   deleteUsersByFirstName,
   getUserById,
@@ -9,7 +10,11 @@ import {
   updateUsersByFirstName,
   upsertUserById
 } from './src/database/users/index.js'
-
+import {
+  createPost,
+  getPosts,
+  getPostsByUser
+} from './src/database/posts/index.js'
 
 async function main() {
   try {
@@ -21,7 +26,7 @@ async function main() {
     // });
 
     // * -- Buscar a todos los usuarios.
-    await getUsers();
+    // await getUsers();
 
     // * -- Buscar al usuario con el id.
     // await getUserById(2);
@@ -51,6 +56,25 @@ async function main() {
     //   lastName: "Toro",
     //   email: "javi.toro1@gmail.com"
     // });
+
+    // * -- Crear una publicación.
+    // await createPost({
+    //   title: "Mi primer post",
+    //   content: "Este es el contenido de mi primer post",
+    // }, 2);
+
+    // * -- Crear un usuario con un post inicial.
+    // await createUserWithInitialPost({
+    //   firstName: "Manolo",
+    //   lastName: "Bustamante",
+    //   email: "manolo.busta@gmail.com"
+    // });
+
+    // * -- Obtener todos los posts.
+    // await getPosts();
+
+    // * -- Obtener los posts de un usuario.
+    await getPostsByUser(2);
 
   } catch (err) {
     return;

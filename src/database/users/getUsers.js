@@ -7,7 +7,6 @@ export default async function getUsers() {
 
       const users = await prisma.user.findMany();
 
-
       console.log("✨ Lista de usuarios:");
       users.map((user) => {
         console.log("✨ Usuario:", user);
